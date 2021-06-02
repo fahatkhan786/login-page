@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign In</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  	<!-- fontawesome -->    
+  	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <section class="sign-in">
+        <!--design-page---------->
+        <div class="main">
+          <!--phone-top-bar-screen--------->
+          <div class="top-bar"></div>
+          <!--company details/logo ------------->
+          <div class="content">
+            <h1>Title</h1>
+            <p> <span>Welcome&#x2757;</span><br> New here? Register now &amp; get started...</p>
+          </div>
+          <!--btns---------------------->
+          <div class="form-btns">
+            <button class="s-btn">Sign In</button>
+            <!--facebook---------->
+            <button class="f-btn">Log in with Facebook</button>
+            <!--new-account------>
+            <a class="new-btn" href="#">New User ?</a>
+          </div>
+          <!--cancel-btn------------>
+          <div class="cancel">
+            <a href="#"><i class="fas fa-times"></i></a>
+          </div>
+        </div>
+
+        <!--sign-in-page--------------->
+          <div class="sign-in-page">
+            <form>
+              <!--email------->
+              <input placeholder="Email" type="email" required />
+              <!--password------->
+              <input placeholder="Password" type="password" required />
+              <!-- forgot-password------->
+              <a href="" class="forgot">forgot password?</a>
+              <!--btn------->
+              <button class="btn_in">Sign In</button>
+          </form>
+          </div>
+
+        <!--sign-up-page--------------->
+          <div class="sign-up-page">
+            <form>
+              <!--email------->
+              <input placeholder="Email" type="email" required />
+              <!--password------->
+              <input placeholder="Password" type="password" required />
+              <!--password------->
+              <input placeholder="Confirm Password" type="password" required />
+              <!--btn------->
+              <button>Sign Up</button>
+            </form>
+          </div>
+      </section>
+      <!--background-circle-------------------->
+      <div class="back"></div>
+    </div>
+
+      <!--Jquery------------>
+      <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+      <script type="text/javascript" src="jquery.js"></script>
+      <script type="text/javascript">
+         /*For Sign In---------------------------------*/
+         $(document).on('click','.s-btn',function(){
+          $('.sign-in').addClass('active-sign-in').siblings('.sign-in').removeClass('active-sign-up')
+          }); 
+         /*For Sign up-------------------------------*/
+        $(document).on('click','.new-btn',function(){
+         $('.sign-in').addClass('active-sign-up').siblings('.sign-in').removeClass('active-sign-in')
+        }); 
+         /*For Go Back To Main Page---------------------*/
+         $(document).ready(function(){
+          $('.cancel a').click(function(){
+           $('.sign-in').removeClass('active-sign-in , active-sign-up')
+          })
+         });
+      </script>
+</body>
+</html>
+
+
+
+  

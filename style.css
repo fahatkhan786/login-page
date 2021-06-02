@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+	font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*user-select: none;*/
+}
+ul{
+	list-style: none;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+}
+body{
+	background-color: #eee;
+}
+.sign-in{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 300px;
+	height: 550px;
+	border-radius: 20px;
+	overflow: hidden;
+	z-index: 1;
+	background: #fff;
+	box-shadow: inset 1px 1px 8px #ddd, 
+             -1px -1px 8px #555;
+}
+.back{
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	top: -40%;
+	left: 60%;
+	transform: translateX(-60%);
+	background-color: #eccc;
+	border-radius: 0 0 50% 50%;
+}
+.main{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #6F1E51/*url(bg.jpg) no-repeat center/cover*/;
+}
+.top-bar{
+	width: 150px;
+	height: 20px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #fff;
+	border-radius: 0 0 20px 20px;
+}
+.content{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-40%);
+	text-align: center;
+}
+.content h1{
+	margin: 0;
+	font-size: 2.5em;
+	letter-spacing: 2px;
+	color: #f8f8f8;
+}
+.content p span{
+	font-size: 1.5em;
+	letter-spacing: 1px;
+	color: rgba(217,217,217,1);
+}
+.content p{
+	font-size: 1em;
+	color: rgba(217,217,217,1);
+}
+.form-btns{
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+}
+.s-btn,.f-btn{
+	width: 250px;
+	height: 40px;
+	margin: 8px 0;
+	border: none;
+	outline: none;
+	border-radius: 20px;
+	font-size: .9em;
+	font-weight: 600;
+	letter-spacing: 1px;
+	box-shadow: 2px 2px 30px rgba(0,0,0,.3);
+	cursor: pointer;
+}
+.s-btn{
+	color: #171717;
+	background-color: #fff;
+	text-transform: uppercase;
+}
+.f-btn{
+	padding: 0 10px;
+	font-weight: 400;
+	color: #fff;
+	background-color: #1863e7;
+	margin-bottom: 20px;
+}
+.new-btn{
+	font-size: .8em;
+	font-weight: 500;
+	text-transform: lowercase;
+	letter-spacing: .5px;
+	color: #eccc/*rgba(252,252,252,.8)*/;
+}
+button:active{
+	transform: scale(1.05);
+}
+.main{
+	height: 100%;
+	border-radius: 0;
+	box-shadow: 2px 6px 12px #ddd;
+}
+.cancel{
+	position: absolute;
+	bottom: -25px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #f8f8f8;
+	font-size: 1.2em;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 2px 6px 20px rgba(0,0,0,.15);
+}
+.cancel i{
+	color: #111;
+}
+.sign-in-page,
+.sign-up-page{
+	height: 47%;
+	width: 100%;
+}
+.sign-in-page form,
+.sign-up-page form{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.sign-in-page form input,
+.sign-up-page form input{
+	width: 230px;
+	height: 35px;
+	margin: 8px 0;
+	padding: 0 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	color: #111;
+	box-sizing: border-box;
+	background: #eccc;
+}
+.sign-in-page form input:focus,
+.sign-up-page form input:focus{
+	box-shadow:  inset 4px 4px 20px  #eccc, 
+            inset -4px -4px 20px #fff3ff;
+}
+.sign-in-page form input::placeholder,
+.sign-up-page form input::placeholder{
+	font-size: 1em;
+	letter-spacing: 1px;
+}
+.forgot{
+	font-size: .8em;
+	font-weight: 300;
+	color: #adadad;
+	letter-spacing: 1px;
+	text-decoration: underline;
+}
+.sign-in-page form button,
+.sign-up-page form button{
+	width: 110px;
+	height: 35px;
+	margin: 5px 0;
+	padding: 0 10px;
+	border: none;
+	outline: none;
+	border-radius: 20px;
+	box-sizing: border-box;
+	background-color: #6F1E51;
+	color: #fff;
+	box-shadow: 12px 12px 30px rgba(0,0,0,.1);
+	cursor: pointer;
+}
+.sign-in-page form button:hover,
+.sign-up-page form button:hover{
+	background-color: #ffc300;
+	color: #333;
+	transition: .3s ease;
+}
+.sign-in-page form .btn_in{
+	margin-top: 20px;
+}
+.sign-in-page,.sign-up-page,.cancel{
+	display: none;
+}
+.active-sign-in .form-btns,
+.active-sign-up .form-btns{
+ 	display: none;
+}
+.active-sign-in .main,
+.active-sign-up .main{
+	height: 55%;
+	border-radius: 0% 0% 45% 45%/0% 0% 25% 25%;
+	animation: main 0.3s linear;
+}
+.active-sign-in .sign-in-page,
+.active-sign-in .cancel{
+ 	display: flex;
+}
+.active-sign-up .sign-up-page,
+.active-sign-up .cancel{
+	display: flex;
+}
+.active-sign-up .cancel i,
+.active-sign-in .cancel i{
+ 	animation: cancel 1s ;
+ 	animation-delay: .5s ease;
+}
+@keyframes main{
+ 0%{
+  height:100%;
+  transition: 1s ease-in-out;
+ }
+ 100%{
+  height:55%;
+  transition: .6s ease-in-out;
+ }
+}
+@keyframes cancel{
+ 0%{
+  opacity: 0;
+  transform: rotate(-190deg);
+  transition: .6s ease-in-out;
+ }
+ 100%{
+  opacity: 1;
+  transform: rotate(0deg);
+ }
+}
